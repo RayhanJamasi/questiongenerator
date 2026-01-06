@@ -1,0 +1,24 @@
+[project]
+name = "questiongenerator"
+version = "0.1.0"
+description = "QuestionGenerator using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]==1.7.2"
+]
+
+[project.scripts]
+questiongenerator = "questiongenerator.main:run"
+run_crew = "questiongenerator.main:run"
+train = "questiongenerator.main:train"
+replay = "questiongenerator.main:replay"
+test = "questiongenerator.main:test"
+run_with_trigger = "questiongenerator.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
