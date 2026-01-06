@@ -1,5 +1,7 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
+from crewai_tools import SerperDevTool
+
 
 # If you want to run a snippet of code before or after the crew starts,
 # you can use the @before_kickoff and @after_kickoff decorators
@@ -13,6 +15,7 @@ class Questiongenerator():
     def question_generator(self) -> Agent:
         return Agent(
             config=self.agents_config['question_generator'], # type: ignore[index]
+            tools=[SerperDevTool(n_results=5)],
             verbose=True
         )
 

@@ -1,14 +1,28 @@
 generate_questions:
   description: >
     Generate 10 unique internship interview questions based on {question_type}.
+
+    Each question must use a DIFFERENT underlying focus, such as:
+    - debugging
+    - teamwork
+    - decision-making
+    - learning new tools
+    - handling ambiguity
+    - time management
+    - technical depth
+    - communication
+    - ownership
+    - ethical judgment
+
+    Do NOT reuse the same core idea.
+    Do NOT reword similar scenarios.
+
     Each question must:
-    - test a different skill or angle
-    - avoid rewording the same idea
     - sound like a real interview question
     - vary in difficulty
-    - Fit well with the word count - Min: {min_word_count} and Max: {max_word_count}
+    - fit {min_word_count}–{max_word_count} words
 
     Do NOT include explanations or numbering.
   expected_output: >
-    A list of 10 distinct interview questions, each on its own line (since I will be parsing for \n with the output parser)
+    10 distinct questions, one per line.
   agent: question_generator
