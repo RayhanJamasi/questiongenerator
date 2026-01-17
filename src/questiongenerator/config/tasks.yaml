@@ -20,9 +20,9 @@ generate_questions:
     Each question must:
     - sound like a real interview question
     - vary in difficulty
-    - fit {min_word_count}–{max_word_count} words
+    - VERY IMPORTANT: the question can be answered EFFECTIVELY between {min_word_count}–{max_word_count} words. 
 
     Do NOT include explanations or numbering.
   expected_output: >
-    10 distinct questions, one per line.
+    10 distinct questions, must be one per line.
   agent: question_generator
